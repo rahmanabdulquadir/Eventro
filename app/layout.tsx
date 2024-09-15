@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/nextjs";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -13,7 +20,7 @@ export const metadata: Metadata = {
   description: "Eventro is an event management application",
   icons: {
     icon: "/favicon.png",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -22,8 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable}`}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        {/* <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn> */}
+        <body className={`${poppins.variable}`}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

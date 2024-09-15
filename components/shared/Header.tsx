@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {SignedOut} from "@clerk/nextjs"
 import React from 'react';
 import { Button } from '../ui/button';
 
@@ -12,6 +13,7 @@ const Header = () => {
           src="/assets/images/logo.svg" width={128} height={38}
           alt="Eventro logo" 
         />
+        {/* <h3 className='text-2xl font-bold'>Eventro</h3> */}
       </Link>
 
       {/* <SignedIn>
@@ -25,13 +27,13 @@ const Header = () => {
           <UserButton afterSignOutUrl="/" />
           <MobileNav />
         </SignedIn> */}
-        {/* <SignedOut> */}
+        <SignedOut>
           <Button asChild className="rounded-full" size="lg">
             <Link href="/sign-in">
               Login
             </Link>
           </Button>
-        {/* </SignedOut> */}
+        </SignedOut>
       </div>
     </div>
   </header>
