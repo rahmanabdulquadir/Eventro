@@ -1,17 +1,7 @@
 import Image from "next/image";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "../ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Separator } from "../ui/separator";
 import NavItems from "./NavItems";
-import { Button } from "../ui/button";
 
 const SHEET_SIDES = ["top"] as const;
 
