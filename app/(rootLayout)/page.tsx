@@ -38,10 +38,10 @@ export default function Home() {
           Trust by <br /> Thousands of Events
         </h2>
 
-        {/* <div className="flex w-full flex-col gap-5 md:flex-row">
-          <Search />
-          <CategoryFilter />
-        </div> */}
+        <div className="flex w-full flex-col gap-5 md:flex-row">
+          Search
+          CategoryFilter
+        </div>
 
         {/* <Collection
           data={events?.data}
